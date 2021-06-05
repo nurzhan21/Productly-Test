@@ -1,0 +1,54 @@
+.services
+     padding: 120px 0
+     text-align: center
+     background: url("../img/services/Oval.png") top center no-repeat
+     background-size: cover
+     &__left
+          margin-top: 60px
+     &__center
+          margin-top: 100px
+     &__right
+          margin-top: 0
+     &__title
+          margin-top: 90px
+          margin-bottom: 20px
+          font-size: 36px
+          +bold
+          color: $text-color-strong
+     &__text
+          margin-bottom: 45px
+          line-height: 26px
+          color: #567592
+          +med
+          text-align: center
+     &__button
+          padding: 15px 30px
+
+@media (min-width: 320px) and (max-width: 767px)
+     .services
+          padding: 80px 0
+          &__left, &__center, &__right
+               margin-top: 20px
+          &__title
+               margin-top: 50px
+               font-size: 28px
+          &__text
+               margin-bottom: 30px
+          &__button
+               margin-bottom: 30px
+          &__left
+               margin-bottom: 20px
+@media (min-width: 768px) and (max-width: 991px)
+     .services
+          padding: 90px 0
+          &__left, &__center, &__right
+               margin-top: 20px
+               &__title
+                    margin-top: 50px
+                    font-size: 32px
+               &__text
+                    margin-bottom: 30px
+               &__button
+                    margin-bottom: 30px
+               &__right__first
+                    margin-top: 100px

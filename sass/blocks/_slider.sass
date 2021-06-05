@@ -1,0 +1,50 @@
+.slider
+     &__title
+          margin-bottom: 10px
+          font-size: 34px
+          color: $text-color-strong
+          +bold
+     &__subtitle
+          display: block
+          margin-bottom: 50px
+          +med
+     &-wrap
+     &-item
+          margin-bottom: 45px
+          &:hover
+               cursor: pointer
+               .slider-item__text
+                    color: $active-color
+          &__img
+               min-height: 180px
+               margin-bottom: 25px
+          &__title
+               margin-bottom: 12px
+          &__text
+               +bold
+               font-size: 24px
+               line-height: 34px
+               color: $text-color-strong
+@media (min-width: 320px) and (max-width: 767px)
+     .slider
+          &__title
+               font-size: 26px
+          &__subtitle
+               margin-bottom: 30px
+          &-item
+               margin-bottom: 30px
+               &__img
+                    margin: 0 auto
+                    margin-bottom: 25px
+               &__text
+                    font-size: 18px
+@media (min-width: 768px) and (max-width: 991px)
+      .slider
+          &__title
+               font-size: 30px
+          &__subtitle
+               margin-bottom: 40px
+          &-item
+               margin-bottom: 40px
+               &__text
+                    font-size: 22px

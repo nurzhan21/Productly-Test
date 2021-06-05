@@ -1,0 +1,129 @@
+.header
+     position: fixed
+     width: 100%
+     top: 0
+     left: 0
+     z-index: 50
+     background-color: #ffffff
+     padding: 40px 0 
+     
+     &:before
+          content: ''
+          position: absolute
+          top: 0
+          left: 0
+          width: 100%
+          height: 100%
+          background-color: #ffffff
+          z-index: 3
+
+     &-block
+          position: relative
+          display: flex
+          justify-content: space-between
+          align-items: center
+          z-index: 5
+     &__logo
+          max-width: 180px
+          position: relative
+          z-index: 5
+     &-button
+          &__in
+               margin-right: 15px
+               color: #173A56
+               background-color: #ffffff
+               border: 2px solid #BCD0E5
+               &:hover
+                    border: 2px solid transparent
+                    color: $text-color-light
+                    background-color: $active-color
+                    
+                    
+.navbar
+     display: flex
+     justify-content: flex-end
+     &__list
+          display: flex
+          justify-content: flex-start
+          align-items: center
+          list-style: none
+          & li
+               margin-right: 30px
+               &:last-child
+                    margin-right: 50px
+     &__link
+          color: $text-color-strong
+          font-size: 14px
+          text-decoration: none
+          &:hover
+               border-bottom: 4px solid  rgba($active-color, 0.5)
+              
+         
+@media (min-width: 320px) and (max-width:991px)
+     body.lock
+          overflow: hidden
+     .header__burger
+          display: block
+          position: relative
+          width: 30px
+          height: 20px
+          position: relative
+          z-index: 5
+          & span
+               position: absolute
+               width: 100%
+               height: 3px
+               top: 9px
+               background-color: $active-color
+          &:before,&:after
+               content: ''
+               position: absolute
+               width: 100%
+               height: 3px
+               left: 0
+               background-color: $active-color
+               transition: all 0.3s ease 0s  
+          &:before
+               top: 0
+          &:after
+               bottom: 0
+          &.active:before
+               transform: rotate(45deg)
+               top: 8px
+          &.active:after
+               transform: rotate(-45deg)
+               bottom: 9px
+          &.active span
+               transform: scale(0) 
+     .header
+          border-bottom: 4px solid $active-color
+          &-right
+               position: fixed
+               top: -100%
+               left: 0
+               width: 100%
+               height: 100%
+               transition: all 0.7s ease 0s
+               padding: 100px 0 0 0
+               background-color:#f3ebe0
+               &.active
+                    top: 0
+          &-button
+               &__in, &__up
+                    display: block
+                    margin: 0 auto
+                    margin-bottom: 20px
+
+     .navbar
+          display: block
+          &__list
+               display: block
+               text-align: center
+               padding-left: 0
+               & li
+                    margin-right: 0
+                    margin-bottom: 15px
+                    &:last-child
+                         margin-right: 0
+  
+     
